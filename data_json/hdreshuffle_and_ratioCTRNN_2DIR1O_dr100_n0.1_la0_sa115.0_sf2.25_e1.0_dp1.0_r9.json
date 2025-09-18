@@ -1,0 +1,85 @@
+{
+    "hyperparameters": {
+        "random_string": "9",
+        "optimizer": "Adam",
+        "noise_amplitude": 0.1,
+        "clip_gradients": true,
+        "max_gradient_norm": 10,
+        "regularization": "None",
+        "regularization_lambda": 0,
+        "batch_size": 64,
+        "note_error_every_steps": 50,
+        "train_for_steps": 5000,
+        "save_network_every_steps": 1000,
+        "learning_rate": 0.0001,
+        "random_seed": 31100567
+    },
+    "task_parameters": {
+        "task_name": "2DIR1O",
+        "input_direction_units": 100,
+        "delay0_from": 10,
+        "delay0_to": 20,
+        "delay1_from": 10,
+        "delay1_to": 90,
+        "delay2_from": 120,
+        "delay2_to": 160,
+        "show_direction_for": 10,
+        "show_cue_for": 100,
+        "dim_input": 101,
+        "dim_output": 2,
+        "distractor_probability": 1.0
+    },
+    "model_parameters": {
+        "model_name": "hdreshuffle_and_ratioCTRNN",
+        "dim_input": 101,
+        "dim_output": 2,
+        "dim_recurrent": 100,
+        "tau": 10,
+        "nonlinearity": "retanh",
+        "input_bias": true,
+        "output_bias": false,
+        "connectivity_cos_exponent": 1.0,
+        "shuffle_amount": 115.0,
+        "scale_factor": 2.25
+    },
+    "additional_comments": [
+        "Training criterion: MSE loss",
+        "Noise added at every timestep of the trial",
+        "Inputs NOT discretized",
+        "Output sin/cos",
+        "Reshuffle of tuning network, training is on top-level parameters + output layer"
+    ],
+    "directory": "data/hdreshuffle_and_ratioCTRNN_2DIR1O_dr100_n0.1_la0_sa115.0_sf2.25_e1.0_dp1.0_r9/",
+    "errors_last": [
+        0.02291281893849373,
+        0.0,
+        12.336971536775902,
+        0.0
+    ],
+    "errors_best": [
+        0.014214795082807541,
+        0.0,
+        9.462196222264302,
+        0.0
+    ],
+    "error_distractor": [
+        0.02261793240904808,
+        0.0,
+        12.320968271823178,
+        0.0
+    ],
+    "error_nodistractor": [
+        0.012435995042324066,
+        0.0,
+        8.878392820202551,
+        0.0
+    ],
+    "error_store_saved": {
+        "0": 1.0,
+        "1000": 0.07017332315444946,
+        "2000": 0.04989380016922951,
+        "3000": 0.034312374889850616,
+        "4000": 0.048633724451065063,
+        "5000": 0.03814050182700157
+    }
+}
