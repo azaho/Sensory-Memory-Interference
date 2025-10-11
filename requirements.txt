@@ -1,0 +1,9 @@
+numpy
+torch
+torchvision
+torchaudio
+matplotlib
+seaborn
+scipy
+openTSNE
+scikit-learn

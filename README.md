@@ -21,11 +21,45 @@ To cite this paper, please use:
 
 ![Figure 6](assets/Figure6.jpg)
 
-## Reproducing Paper Figures
+## Reproducing Analyses and Paper Figures
 
-- Please run all the cells from `analysis_interpolation_between_solutions.ipynb` to reproduce Figure 4.
-- Please run all the cells from `analysis_procrustes_distance.ipynb` to reproduce Figure 3i, and Figure 6.
-- The code for reproducing analyses on example networks from Figure 2, as well as Figure 3e-h is located in the `analysis_example_network_figures.ipynb` notebook.
+### Hardware Requirements
+
+To run the code in this repository, a standard laptop or personal computer will suffice. To re-train all of the RNN networks, we recommend to use a parallelizable compute cluster with 32+ CPU cores (the training procedure can be done on CPU without GPU). For optimal performance when running the code of this repository to reproduce the analysis figures, we recommend the following minimal hardware capabilities:
+
+- RAM: 16+ GB
+- CPU: 4+ cores, 3.3+ GHz/core
+
+### Software Requirements
+
+The code in the Python files and Jupyter notebooks has been at various times tested on and should be compatible with Windows 10&11, MacOS and Linux operating systems. This code is compatible with Python versions 3.9-3.11.
+
+To install the necessary requirements and packages, please run the following commands. First, optionally, install a virtual environment with:
+```python
+python -m venv .venv
+source .venv/bin/activate # On Windows: .venv/Scripts/activate
+pip install --upgrade pip
+```
+Then, use `pip` to install the necessary packages to run the code in this repository:
+```python
+pip install -r requirements.txt
+```
+Additionally, you will need to install the `netrep` package to compute Procrustes distances from RNNs to neural data and between RNNs. To install the `netrep` package, please follow the instructions on the official [GitHub repository of NetRep](https://github.com/ahwillia/netrep). In short, you will need to run:
+```python
+git clone https://github.com/ahwillia/netrep
+cd netrep/
+pip install -e .
+```
+
+Installing all of the packages on a normal laptop should take no longer than 30 minutes, and possibly shorter.
+
+### Instructions for reproducing the analyses and paper figures
+
+Tunning all the cells in the specified Jupyter notebooks is expected to run the computational analyses and produce and save the PDF of the figures in the `paper_figures` folder.
+
+- Please run all the cells from `analysis_interpolation_between_solutions.ipynb` to reproduce Figure 4. Running this notebook should take no longer than 30 minutes on a typical laptop.
+- Please run all the cells from `analysis_procrustes_distance.ipynb` to reproduce Figure 3i, and Figure 6. Running this notebook should take no longer than 60 minutes on a typical laptop.
+- The code for reproducing analyses on example networks from Figure 2, as well as Figure 3e-h is located in the `analysis_example_network_figures.ipynb` notebook. Running this notebook should take no longer than 2 hours on a typical laptop.
 
 ## Folders
 
