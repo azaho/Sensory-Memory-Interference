@@ -60,6 +60,7 @@ Tunning all the cells in the specified Jupyter notebooks is expected to run the 
 - Please run all the cells from `analysis_interpolation_between_solutions.ipynb` to reproduce Figure 4. Running this notebook should take no longer than 30 minutes on a typical laptop.
 - Please run all the cells from `analysis_procrustes_distance.ipynb` to reproduce Figure 3i, and Figure 6. Running this notebook should take no longer than 60 minutes on a typical laptop.
 - The code for reproducing analyses on example networks from Figure 2, as well as Figure 3e-h is located in the `analysis_example_network_figures.ipynb` notebook. Running this notebook should take no longer than 2 hours on a typical laptop.
+- The cells in the notebooks `analysis_neural_2024_intertrial_correlations.ipynb` and `data\hdgating_and_inversionCTRNN_2DIR1O_dr100_n0.1_la0_e1_dp1.0_r1\analysis_and_figures.ipynb` reproduce the intertrial correlation analyses and generate panels for Figure 7.
 
 ## Folders
 
@@ -71,7 +72,7 @@ Tunning all the cells in the specified Jupyter notebooks is expected to run the 
 
 ## Files
 
-#### train_*.py files are the files that will train the individual RNNs, according to the parameters passed through command line arguments, and will save the results in the data/* folders.
+#### train_*.py files in the `train` folder are the files that will train the individual RNNs, according to the parameters passed through command line arguments, and will save the results in the data/* folders.
 Name mapping: ("hd" stands for "hand-designed")
 - **R/T** = hdreshuffle
 - **SA** = hdratio
@@ -82,3 +83,5 @@ Name mapping: ("hd" stands for "hand-designed")
 - **backprop_stoptrainingatthreshold** = training proceeds until a certain threshold of performance is reached. Useful for creating non-overtrained backprop RNNs.
 
 #### analysis_*.ipynb files are the ones that analyze the data from the trained RNNs (as well as neural data) and make some of the figures for the paper.
+
+statistical_testing_utils.py defines some useful functions that are used in the Jupyter notebooks analyzing the macaque neural data.
