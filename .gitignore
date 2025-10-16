@@ -1,8 +1,12 @@
 # Virtual environment
 .venv/
+**/__pycache__
 
 # Netrep package from another Git repository
 netrep/
 
 # Neural data
 data_neural/
+
+# Figures
+paper_figures/
