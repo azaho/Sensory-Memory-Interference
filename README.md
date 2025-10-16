@@ -51,7 +51,7 @@ cd netrep/
 pip install -e .
 ```
 
-Installing all of the packages on a normal laptop should take no longer than 30 minutes, and possibly shorter.
+Installing all of the packages on a normal laptop should take no longer than 30 minutes to 1 hour, and possibly shorter.
 
 ### Instructions for reproducing the analyses and paper figures
 
